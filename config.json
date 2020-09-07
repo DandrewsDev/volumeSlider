@@ -1,0 +1,41 @@
+{
+  "blacklist": [
+    "dllhost.exe",
+    "svchost.exe",
+    "RuntimeBroker.exe",
+    "rundll32.exe",
+    "conhost.exe",
+    "WmiPrvSE.exe",
+    "cmd.exe",
+    "winpty-agent.exe",
+    "RtkAudUService64.exe",
+    "TextInputHost.exe",
+    "Taskmgr.exe"
+  ],
+  "whitelist": [
+    {
+      "appName": "Firefox",
+      "exeName": "firefox.exe"
+    },
+    {
+      "appName": "FACEIT",
+      "exeName": "FACEIT.exe"
+    },
+    {
+      "appName": "Discord",
+      "exeName": "Discord.exe"
+    },
+    {
+      "appName": "Spotify",
+      "exeName": "Spotify.exe"
+    },
+    {
+      "appName": "Master",
+      "exeName": "master"
+    },
+    {
+      "appName": "Forza",
+      "exeName": "ForzaHorizon4.exe"
+    }
+  ]
+}

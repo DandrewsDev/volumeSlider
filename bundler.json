@@ -1,0 +1,6 @@
+{
+  "app_name": "volumeSlider",
+  "icon_path_darwin": "resources/app-icon.icns",
+  "icon_path_linux": "resources/app-icon.png",
+  "icon_path_windows": "resources/app-icon.ico"
+}
