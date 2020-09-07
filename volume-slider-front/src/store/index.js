@@ -6,6 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    hostAddress: "",
     appNames: [
     ]
   },
@@ -14,10 +15,16 @@ export default new Vuex.Store({
   },
   mutations: {
     setAppSliders: (state, nameList) => (state.appNames = nameList),
+    setHostAddress: (state, add) => (state.hostAddress = add),
   },
   actions: {
-    fetchAppSliderList({commit}) {
-      axios.get( '/slider-list')
+    updateHostAddress({commit}) {
+      if (window.location.href.includes('file:///')) {
+        commit('setHostAddress', 'http://localhost:1323')
+      }
+    },
+    fetchAppSliderList({commit, state}) {
+      axios.get(state.hostAddress + '/slider-list')
           .then(response => {
             commit('setAppSliders', response.data)
           })
@@ -27,7 +34,7 @@ export default new Vuex.Store({
           })
     },
     postAppSliderList({state}) {
-      axios.post( '/slider-list', {
+      axios.post(state.hostAddress + '/slider-list', {
         appNames: state.appNames
       }).then(r => console.log(r))
     },

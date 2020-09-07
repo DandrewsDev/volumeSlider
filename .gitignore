@@ -1,5 +1,5 @@
 .DS_Store
-volume-slider-front/node_modules
+/volume-slider-front/node_modules
 /dist
 /output
 /node
@@ -23,3 +23,5 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+bind_windows_amd64.go
+windows.syso

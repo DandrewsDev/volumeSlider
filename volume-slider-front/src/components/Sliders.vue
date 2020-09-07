@@ -51,12 +51,13 @@
       }
     },
     mounted() {
+      this.updateHostAddress();
       this.fetchAppSliderList();
-
     },
     methods: {
       ...mapActions([
-        'fetchAppSliderList'
+        'fetchAppSliderList',
+        'updateHostAddress',
       ]),
       handleMsg(msg) {
         console.log(msg);

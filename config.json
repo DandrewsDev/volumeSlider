@@ -14,12 +14,12 @@
   ],
   "whitelist": [
     {
-      "appName": "Firefox",
-      "exeName": "firefox.exe"
+      "appName": "Master",
+      "exeName": "master"
     },
     {
-      "appName": "FACEIT",
-      "exeName": "FACEIT.exe"
+      "appName": "Firefox",
+      "exeName": "firefox.exe"
     },
     {
       "appName": "Discord",
@@ -30,12 +30,8 @@
       "exeName": "Spotify.exe"
     },
     {
-      "appName": "Master",
-      "exeName": "master"
-    },
-    {
-      "appName": "Forza",
-      "exeName": "ForzaHorizon4.exe"
+      "appName": "Chrome",
+      "exeName": "chrome.exe"
     }
   ]
 }

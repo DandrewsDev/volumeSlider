@@ -28,7 +28,7 @@
     import axios from 'axios';
     import VueSlider from 'vue-slider-component'
     import 'vue-slider-component/theme/antd.css'
-    import {mapActions, mapGetters} from "vuex";
+    import {mapActions, mapGetters, mapState} from "vuex";
 
     export default {
         name: "appSlider",
@@ -49,6 +49,9 @@
             },
         },
         computed: {
+            ...mapState({
+              hostAdd: state => state.hostAddress,
+            }),
             ...mapGetters([
                 'getAppSliders'
             ]),
@@ -80,7 +83,7 @@
                 'postAppSliderList'
             ]),
             updateSliderData() {
-                axios.get( '/app-vol/' + this.slider.exeName)
+                axios.get( this.hostAdd + '/app-vol/' + this.slider.exeName)
                         .then(response => {
                             this.value = response.data.volume;
                             this.disabled = false;
@@ -101,7 +104,7 @@
                 }
             },
             setAppVolume(newVol) {
-                axios.post('/app-vol-set', {
+                axios.post(this.hostAdd + '/app-vol-set', {
                     name: this.slider.exeName,
                     volume: parseInt(newVol)
                 })
